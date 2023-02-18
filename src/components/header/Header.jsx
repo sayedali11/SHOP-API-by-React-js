@@ -8,6 +8,9 @@ const Header = () => {
 
   const menuRef = useRef(null);
   const headerRef = useRef(null);
+
+  // show fixed header nav
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (

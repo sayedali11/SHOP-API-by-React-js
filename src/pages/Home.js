@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-import { fetchProducts } from '../apis/apis';
 import Cards from '../components/card/Cards';
 import { useDispatch } from 'react-redux';
 import { setProducts } from '../redux/actions/actions';
 import Sliders from '../components/slider/Sliders.jsx';
 import Categories from '../components/categories/Categories';
+import { fetchProduct } from '../data/fetchApi';
 const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchProducts(dispatch, setProducts);
+    fetchProduct(dispatch, setProducts);
   }, [dispatch]);
 
   return (

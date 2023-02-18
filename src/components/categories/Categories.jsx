@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchCategoriesProducts } from '../../apis/apis';
+import { fetchCategoriesProducts } from '../../data/fetchApi';
 import { setProducts, setSelectedCategory } from '../../redux/actions/actions';
 
 const Categories = () => {

@@ -1,6 +1,5 @@
 const initialState = {
   products: [],
-  totalQuantity: 0,
 };
 
 export const productsReducer = (state = initialState, { type, payload }) => {
@@ -56,7 +55,6 @@ export const handleCart = (state = cart, action) => {
           },
         ];
       }
-    // break;
 
     case 'DELITEM':
       const exist1 = state.find((x) => x.id === product.id);
@@ -67,7 +65,6 @@ export const handleCart = (state = cart, action) => {
           x.id === product.id ? { ...x, qty: x.qty - 1 } : x
         );
       }
-    // break;
 
     case 'DELETE_FROM_CART':
       const products = action.payload;
@@ -78,6 +75,5 @@ export const handleCart = (state = cart, action) => {
       return [];
     default:
       return state;
-    // break;
   }
 };
